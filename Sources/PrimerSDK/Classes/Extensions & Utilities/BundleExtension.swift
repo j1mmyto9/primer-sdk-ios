@@ -10,7 +10,7 @@
 import Foundation
 
 internal extension Bundle {
-    static customLocalizationBundle: Bundle?
+    static var customLocalizationBundle: Bundle?
 
     static var primerFramework: Bundle {
         return Bundle(for: Primer.self)
