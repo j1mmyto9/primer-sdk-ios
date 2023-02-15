@@ -47,6 +47,14 @@ public class Primer {
         self.delegate = delegate
         PrimerInternal.shared.configure(settings: settings)
     }
+
+    /**
+     Configure SDK's settings: localizationBundle
+     */
+    
+    public func configure(localizationBundle: Bundle?) {
+        Bundle.customLocalizationBundle = localizationBundle
+    }
     
     // MARK: - PRESENTATION
     

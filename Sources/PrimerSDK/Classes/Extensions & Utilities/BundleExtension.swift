@@ -10,6 +10,7 @@
 import Foundation
 
 internal extension Bundle {
+    static customLocalizationBundle: Bundle?
 
     static var primerFramework: Bundle {
         return Bundle(for: Primer.self)
@@ -23,6 +24,10 @@ internal extension Bundle {
         #else
         return Bundle.module
         #endif
+    }
+
+    static var primerCustomLocalization: Bundle {
+        return customLocalizationBundle ?? primerResources
     }
 
     static var primerFrameworkIdentifier: String {
